@@ -1,0 +1,915 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE0C69B6-1095-43F1-A284-E09BC6BE42F0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VersityFinalProject</RootNamespace>
+    <AssemblyName>VersityFinalProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AppSupport.Tech">
+      <HintPath>..\..\..\..\AppSupport.Tech\AppSupport.Tech\bin\Debug\AppSupport.Tech.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook">
+      <HintPath>C:\Users\EMRUL KAYES\Desktop\facebookfriendslisting\FacebookLoginButton\bin\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\Users\EMRUL KAYES\Desktop\facebookfriendslisting\FacebookLoginButton\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\assets\advanced-datatable\media\css\demo_page.css" />
+    <Content Include="content\assets\advanced-datatable\media\css\demo_table.css" />
+    <Content Include="content\assets\advanced-datatable\media\js\jquery.dataTables.js" />
+    <Content Include="content\assets\bootstrap-colorpicker\css\colorpicker.css" />
+    <Content Include="content\assets\bootstrap-colorpicker\js\bootstrap-colorpicker.js" />
+    <Content Include="content\assets\bootstrap-datepicker\css\datepicker.css" />
+    <Content Include="content\assets\bootstrap-datepicker\js\bootstrap-datepicker.js" />
+    <Content Include="content\assets\bootstrap-daterangepicker\date.js" />
+    <Content Include="content\assets\bootstrap-daterangepicker\daterangepicker-bs3.css" />
+    <Content Include="content\assets\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="content\assets\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="content\assets\bootstrap-daterangepicker\moment.min.js" />
+    <Content Include="content\assets\bootstrap-datetimepicker\css\datetimepicker.css" />
+    <Content Include="content\assets\bootstrap-datetimepicker\js\bootstrap-datetimepicker.js" />
+    <Content Include="content\assets\bootstrap-fileupload\bootstrap-fileupload.css" />
+    <Content Include="content\assets\bootstrap-fileupload\bootstrap-fileupload.js" />
+    <Content Include="content\assets\bootstrap-inputmask\bootstrap-inputmask.min.js" />
+    <Content Include="content\assets\bootstrap-timepicker\compiled\timepicker.css" />
+    <Content Include="content\assets\bootstrap-timepicker\js\bootstrap-timepicker.js" />
+    <Content Include="content\assets\bootstrap-wysihtml5\bootstrap-wysihtml5.css" />
+    <Content Include="content\assets\bootstrap-wysihtml5\bootstrap-wysihtml5.js" />
+    <Content Include="content\assets\bootstrap-wysihtml5\wysihtml5-0.3.0.js" />
+    <Content Include="content\assets\chart-master\Chart.js" />
+    <Content Include="content\assets\ckeditor\ckeditor.js" />
+    <Content Include="content\assets\data-tables\DT_bootstrap.css" />
+    <Content Include="content\assets\data-tables\DT_bootstrap.js" />
+    <Content Include="content\assets\data-tables\jquery.dataTables.js" />
+    <Content Include="content\assets\dropzone\css\dropzone.css" />
+    <Content Include="content\assets\dropzone\dropzone.js" />
+    <Content Include="content\assets\fancybox\source\jquery.fancybox.css" />
+    <Content Include="content\assets\fancybox\source\jquery.fancybox.js" />
+    <Content Include="content\assets\file-uploader\css\jquery.fileupload-noscript.css" />
+    <Content Include="content\assets\file-uploader\css\jquery.fileupload-ui-noscript.css" />
+    <Content Include="content\assets\file-uploader\css\jquery.fileupload-ui.css" />
+    <Content Include="content\assets\file-uploader\css\jquery.fileupload.css" />
+    <Content Include="content\assets\file-uploader\js\jquery.fileupload-audio.js" />
+    <Content Include="content\assets\file-uploader\js\jquery.fileupload-image.js" />
+    <Content Include="content\assets\file-uploader\js\jquery.fileupload-process.js" />
+    <Content Include="content\assets\file-uploader\js\jquery.fileupload-ui.js" />
+    <Content Include="content\assets\file-uploader\js\jquery.fileupload-validate.js" />
+    <Content Include="content\assets\file-uploader\js\jquery.fileupload-video.js" />
+    <Content Include="content\assets\file-uploader\js\jquery.fileupload.js" />
+    <Content Include="content\assets\file-uploader\js\jquery.iframe-transport.js" />
+    <Content Include="content\assets\file-uploader\js\main.js" />
+    <Content Include="content\assets\file-uploader\js\vendor\jquery.ui.widget.js" />
+    <Content Include="content\assets\flot\jquery.flot.crosshair.js" />
+    <Content Include="content\assets\flot\jquery.flot.js" />
+    <Content Include="content\assets\flot\jquery.flot.pie.js" />
+    <Content Include="content\assets\flot\jquery.flot.resize.js" />
+    <Content Include="content\assets\flot\jquery.flot.stack.js" />
+    <Content Include="content\assets\font-awesome\css\font-awesome.css" />
+    <Content Include="content\assets\fuelux\css\tree-style.css" />
+    <Content Include="content\assets\fuelux\js\spinner.min.js" />
+    <Content Include="content\assets\fuelux\js\tree.min.js" />
+    <Content Include="content\assets\fullcalendar\fullcalendar\bootstrap-fullcalendar.css" />
+    <Content Include="content\assets\fullcalendar\fullcalendar\fullcalendar.min.js" />
+    <Content Include="content\assets\gritter\css\jquery.gritter.css" />
+    <Content Include="content\assets\gritter\js\jquery.gritter.js" />
+    <Content Include="content\assets\jcrop\css\jquery.Jcrop.min.css" />
+    <Content Include="content\assets\jcrop\js\jquery.color.js" />
+    <Content Include="content\assets\jcrop\js\jquery.Jcrop.min.js" />
+    <Content Include="content\assets\jquery-easy-pie-chart\jquery.easy-pie-chart.css" />
+    <Content Include="content\assets\jquery-easy-pie-chart\jquery.easy-pie-chart.js" />
+    <Content Include="content\assets\jquery-file-upload\css\jquery.fileupload-ui.css" />
+    <Content Include="content\assets\jquery-file-upload\js\jquery.fileupload-fp.js" />
+    <Content Include="content\assets\jquery-file-upload\js\jquery.fileupload-ui.js" />
+    <Content Include="content\assets\jquery-file-upload\js\jquery.fileupload.js" />
+    <Content Include="content\assets\jquery-file-upload\js\jquery.iframe-transport.js" />
+    <Content Include="content\assets\jquery-file-upload\js\vendor\canvas-to-blob.min.js" />
+    <Content Include="content\assets\jquery-file-upload\js\vendor\jquery.ui.widget.js" />
+    <Content Include="content\assets\jquery-file-upload\js\vendor\load-image.min.js" />
+    <Content Include="content\assets\jquery-file-upload\js\vendor\tmpl.min.js" />
+    <Content Include="content\assets\jquery-knob\js\jquery.knob.js" />
+    <Content Include="content\assets\jquery-multi-select\css\multi-select.css" />
+    <Content Include="content\assets\jquery-multi-select\js\jquery.multi-select.js" />
+    <Content Include="content\assets\jquery-multi-select\js\jquery.quicksearch.js" />
+    <Content Include="content\assets\jquery-ui\jquery-ui-1.10.1.custom.min.css" />
+    <Content Include="content\assets\jquery-ui\jquery-ui-1.10.1.custom.min.js" />
+    <Content Include="content\assets\morris.js-0.4.3\morris.css" />
+    <Content Include="content\assets\morris.js-0.4.3\morris.min.js" />
+    <Content Include="content\assets\morris.js-0.4.3\raphael-min.js" />
+    <Content Include="content\assets\nestable\jquery.nestable.css" />
+    <Content Include="content\assets\nestable\jquery.nestable.js" />
+    <Content Include="content\assets\summernote\dist\summernote.css" />
+    <Content Include="content\assets\summernote\dist\summernote.min.js" />
+    <Content Include="content\assets\toastr-master\toastr.css" />
+    <Content Include="content\assets\toastr-master\toastr.js" />
+    <Content Include="content\assets\xchart\d3.v3.min.js" />
+    <Content Include="content\assets\xchart\xcharts.css" />
+    <Content Include="content\assets\xchart\xcharts.min.js" />
+    <Content Include="content\css\appstyle.css" />
+    <Content Include="content\css\bootstrap-reset.css" />
+    <Content Include="content\css\bootstrap.min.css" />
+    <Content Include="content\css\gallery.css" />
+    <Content Include="content\css\image-crop.css" />
+    <Content Include="content\css\invoice-print.css" />
+    <Content Include="content\css\jquery.steps.css" />
+    <Content Include="content\css\owl.carousel.css" />
+    <Content Include="content\css\slidebars.css" />
+    <Content Include="content\css\soon.css" />
+    <Content Include="content\css\style-responsive.css" />
+    <Content Include="content\css\style.css" />
+    <Content Include="content\css\table-responsive.css" />
+    <Content Include="content\css\tasks.css" />
+    <Content Include="content\css\yamm.css" />
+    <Content Include="content\img\avatar-mini.jpg" />
+    <Content Include="content\img\avatar-mini2.jpg" />
+    <Content Include="content\img\avatar-mini3.jpg" />
+    <Content Include="content\img\avatar-mini4.jpg" />
+    <Content Include="content\img\avatar1.jpg" />
+    <Content Include="content\img\avatar1_small.jpg" />
+    <Content Include="content\img\blue-bg.jpg" />
+    <Content Include="content\img\chat-attach.jpg" />
+    <Content Include="content\img\chat-avatar.jpg" />
+    <Content Include="content\img\chat-avatar2.jpg" />
+    <Content Include="content\img\dark-bg.jpg" />
+    <Content Include="content\img\email-img\banner.jpg" />
+    <Content Include="content\img\email-img\icon-cal.png" />
+    <Content Include="content\img\email-img\icon-tel.png" />
+    <Content Include="content\img\email-img\image1.png" />
+    <Content Include="content\img\email-img\image2.png" />
+    <Content Include="content\img\email-img\image3.png" />
+    <Content Include="content\img\email-img\image4.png" />
+    <Content Include="content\img\email-img\main-img.png" />
+    <Content Include="content\img\email-img\social-facebook.png" />
+    <Content Include="content\img\email-img\social-google.png" />
+    <Content Include="content\img\email-img\social-linkedin.png" />
+    <Content Include="content\img\email-img\social-twitter.png" />
+    <Content Include="content\img\email-img\social-youtube.png" />
+    <Content Include="content\img\email-img\vector-lab.jpg" />
+    <Content Include="content\img\fb-img.jpg" />
+    <Content Include="content\img\file-search\ai.png" />
+    <Content Include="content\img\file-search\doc.png" />
+    <Content Include="content\img\file-search\email.png" />
+    <Content Include="content\img\file-search\eps.png" />
+    <Content Include="content\img\file-search\jpg.png" />
+    <Content Include="content\img\file-search\pdf.png" />
+    <Content Include="content\img\file-search\ppt.png" />
+    <Content Include="content\img\file-search\psd.png" />
+    <Content Include="content\img\file-search\rss.png" />
+    <Content Include="content\img\file-search\xls.png" />
+    <Content Include="content\img\file-search\zip.png" />
+    <Content Include="content\img\flags\de.png" />
+    <Content Include="content\img\flags\es.png" />
+    <Content Include="content\img\flags\fr.png" />
+    <Content Include="content\img\flags\ru.png" />
+    <Content Include="content\img\flags\us.png" />
+    <Content Include="content\img\follower-avatar.jpg" />
+    <Content Include="content\img\gallery\1.jpg" />
+    <Content Include="content\img\gallery\2.jpg" />
+    <Content Include="content\img\gallery\3.jpg" />
+    <Content Include="content\img\gallery\4.jpg" />
+    <Content Include="content\img\gallery\5.jpg" />
+    <Content Include="content\img\gallery\6.jpg" />
+    <Content Include="content\img\go.jpg" />
+    <Content Include="content\img\go1.jpg" />
+    <Content Include="content\img\go2.jpg" />
+    <Content Include="content\img\go3.jpg" />
+    <Content Include="content\img\go4.jpg" />
+    <Content Include="content\img\green-bg.jpg" />
+    <Content Include="content\img\mail-avatar.jpg" />
+    <Content Include="content\img\mega-menu\mega-menu-images1.jpg" />
+    <Content Include="content\img\mega-menu\mega-menu-images2.jpg" />
+    <Content Include="content\img\mega-menu\mega-menu-images3.jpg" />
+    <Content Include="content\img\mega-menu\mega-menu-images4.jpg" />
+    <Content Include="content\img\mega-menu\mega-menu-images5.jpg" />
+    <Content Include="content\img\mega-menu\mega-menu-images6.jpg" />
+    <Content Include="content\img\mega_icon1.png" />
+    <Content Include="content\img\mega_icon2.png" />
+    <Content Include="content\img\mega_icon3.png" />
+    <Content Include="content\img\mega_icon4.png" />
+    <Content Include="content\img\nav-expand.png" />
+    <Content Include="content\img\photos\user1.png" />
+    <Content Include="content\img\photos\user2.png" />
+    <Content Include="content\img\photos\user3.png" />
+    <Content Include="content\img\photos\user4.png" />
+    <Content Include="content\img\photos\user5.png" />
+    <Content Include="content\img\pro-ac-1.png" />
+    <Content Include="content\img\pro-ac-2.png" />
+    <Content Include="content\img\product-list\pro-1.jpg" />
+    <Content Include="content\img\product-list\pro-thumb-1.jpg" />
+    <Content Include="content\img\product-list\pro-thumb-2.jpg" />
+    <Content Include="content\img\product-list\pro-thumb-3.jpg" />
+    <Content Include="content\img\product-list\pro-thumb-big.jpg" />
+    <Content Include="content\img\product-list\pro1.jpg" />
+    <Content Include="content\img\product-list\pro2.jpg" />
+    <Content Include="content\img\product-list\pro3.jpg" />
+    <Content Include="content\img\product1.jpg" />
+    <Content Include="content\img\product2.png" />
+    <Content Include="content\img\product3.png" />
+    <Content Include="content\img\profile-avatar.jpg" />
+    <Content Include="content\img\purple-bg.jpg" />
+    <Content Include="content\img\ring.jpg" />
+    <Content Include="content\img\sm-img-1.jpg" />
+    <Content Include="content\img\sm-img-2.jpg" />
+    <Content Include="content\img\sm-img-3.jpg" />
+    <Content Include="content\img\vector-lab.jpg" />
+    <Content Include="content\js\advanced-form-components.js" />
+    <Content Include="content\js\all-chartjs.js" />
+    <Content Include="content\js\bootstrap-switch.js" />
+    <Content Include="content\js\bootstrap-validator.min.js" />
+    <Content Include="content\js\bootstrap.min.js" />
+    <Content Include="content\js\common-scripts.js" />
+    <Content Include="content\js\count.js" />
+    <Content Include="content\js\draggable-portlet.js" />
+    <Content Include="content\js\dynamic_table_init.js" />
+    <Content Include="content\js\easy-pie-chart.js" />
+    <Content Include="content\js\editable-table.js" />
+    <Content Include="content\js\external-dragging-calendar.js" />
+    <Content Include="content\js\flot-chart.js" />
+    <Content Include="content\js\form-component.js" />
+    <Content Include="content\js\form-image-crop.js" />
+    <Content Include="content\js\form-validation-script.js" />
+    <Content Include="content\js\ga.js" />
+    <Content Include="content\js\gmaps-scripts.js" />
+    <Content Include="content\js\gmaps.js" />
+    <Content Include="content\js\gritter.js" />
+    <Content Include="content\js\hover-dropdown.js" />
+    <Content Include="content\js\jquery-migrate-1.2.1.min.js" />
+    <Content Include="content\js\jquery-ui-1.9.2.custom.min.js" />
+    <Content Include="content\js\jquery.customSelect.min.js" />
+    <Content Include="content\js\jquery.dcjqaccordion.2.7.js" />
+    <Content Include="content\js\jquery.js" />
+    <Content Include="content\js\jquery.nicescroll.js" />
+    <Content Include="content\js\jquery.pulsate.min.js" />
+    <Content Include="content\js\jquery.scrollTo.min.js" />
+    <Content Include="content\js\jquery.sparkline.js" />
+    <Content Include="content\js\jquery.steps.min.js" />
+    <Content Include="content\js\jquery.stepy.js" />
+    <Content Include="content\js\jquery.tagsinput.js" />
+    <Content Include="content\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="content\js\jquery.validate.min.js" />
+    <Content Include="content\js\modernizr.custom.js" />
+    <Content Include="content\js\morris-script.js" />
+    <Content Include="content\js\nestable.js" />
+    <Content Include="content\js\owl.carousel.js" />
+    <Content Include="content\js\pulstate.js" />
+    <Content Include="content\js\respond.min.js" />
+    <Content Include="content\js\slidebars.min.js" />
+    <Content Include="content\js\sliders.js" />
+    <Content Include="content\js\soon\custom.js" />
+    <Content Include="content\js\soon\plugins.js" />
+    <Content Include="content\js\sparkline-chart.js" />
+    <Content Include="content\js\tasks.js" />
+    <Content Include="content\js\toucheffects.js" />
+    <Content Include="content\js\tree.js" />
+    <Content Include="default.aspx" />
+    <Content Include="errors\404.aspx" />
+    <Content Include="errors\error.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="page\aboutus.aspx" />
+    <Content Include="page\bevoulunteers.aspx" />
+    <Content Include="page\contactus.aspx" />
+    <Content Include="page\donorlist.aspx" />
+    <Content Include="page\externaluseractivation.aspx" />
+    <Content Include="page\services.aspx" />
+    <Content Include="page\vision.aspx" />
+    <Content Include="page\why-memeber.aspx" />
+    <Content Include="sitecontent\css\animate.min.css" />
+    <Content Include="sitecontent\css\bootstrap.min.css" />
+    <Content Include="sitecontent\css\font-awesome.css" />
+    <Content Include="sitecontent\css\font-awesome.min.css" />
+    <Content Include="sitecontent\css\main.css" />
+    <Content Include="sitecontent\css\prettyPhoto.css" />
+    <Content Include="sitecontent\css\responsive.css" />
+    <Content Include="sitecontent\css\style.css" />
+    <Content Include="sitecontent\images\accordion1.png" />
+    <Content Include="sitecontent\images\ads\ad1.png" />
+    <Content Include="sitecontent\images\ads\ad2.png" />
+    <Content Include="sitecontent\images\ads\ad3.png" />
+    <Content Include="sitecontent\images\ads\ad4.png" />
+    <Content Include="sitecontent\images\banner2.jpg" />
+    <Content Include="sitecontent\images\blank.png" />
+    <Content Include="sitecontent\images\blog\avatar.jpg" />
+    <Content Include="sitecontent\images\blog\avatar1.png" />
+    <Content Include="sitecontent\images\blog\avatar2.png" />
+    <Content Include="sitecontent\images\blog\avatar3.png" />
+    <Content Include="sitecontent\images\blog\blog1.jpg" />
+    <Content Include="sitecontent\images\blog\blog2.jpg" />
+    <Content Include="sitecontent\images\blog\boy.png" />
+    <Content Include="sitecontent\images\blog\boy2.png" />
+    <Content Include="sitecontent\images\blog\boy3.png" />
+    <Content Include="sitecontent\images\blog\comments_bg.png" />
+    <Content Include="sitecontent\images\blog\gallery1.png" />
+    <Content Include="sitecontent\images\blog\gallery2.png" />
+    <Content Include="sitecontent\images\blog\gallery3.png" />
+    <Content Include="sitecontent\images\blog\gallery4.png" />
+    <Content Include="sitecontent\images\blog\gallery5.png" />
+    <Content Include="sitecontent\images\blog\gallery6.png" />
+    <Content Include="sitecontent\images\blog\girl.png" />
+    <Content Include="sitecontent\images\blog\thumb1.jpg" />
+    <Content Include="sitecontent\images\blog\thumb2.jpg" />
+    <Content Include="sitecontent\images\blog\thumb3.jpg" />
+    <Content Include="sitecontent\images\blood1.jpg" />
+    <Content Include="sitecontent\images\bloodbankleft.png" />
+    <Content Include="sitecontent\images\call.png" />
+    <Content Include="sitecontent\images\client1.png" />
+    <Content Include="sitecontent\images\client2.png" />
+    <Content Include="sitecontent\images\client3.png" />
+    <Content Include="sitecontent\images\contact.png" />
+    <Content Include="sitecontent\images\dammy.png" />
+    <Content Include="sitecontent\images\drop-nav.png" />
+    <Content Include="sitecontent\images\drop.png" />
+    <Content Include="sitecontent\images\formLogo.jpg" />
+    <Content Include="sitecontent\images\gallery\gallery1.jpg" />
+    <Content Include="sitecontent\images\gallery\gallery2.jpg" />
+    <Content Include="sitecontent\images\gallery\gallery3.jpg" />
+    <Content Include="sitecontent\images\gallery\gallery4.jpg" />
+    <Content Include="sitecontent\images\gallery\gallery5.jpg" />
+    <Content Include="sitecontent\images\gallery\gallery6.jpg" />
+    <Content Include="sitecontent\images\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="sitecontent\images\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="sitecontent\images\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="sitecontent\images\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="sitecontent\images\ico\favicon.ico" />
+    <Content Include="sitecontent\images\image_bg.png" />
+    <Content Include="sitecontent\images\location.png" />
+    <Content Include="sitecontent\images\location1.png" />
+    <Content Include="sitecontent\images\logo.png" />
+    <Content Include="sitecontent\images\man1.jpg" />
+    <Content Include="sitecontent\images\man2.jpg" />
+    <Content Include="sitecontent\images\man3.jpg" />
+    <Content Include="sitecontent\images\man4.jpg" />
+    <Content Include="sitecontent\images\map.jpg" />
+    <Content Include="sitecontent\images\partners\partner1.png" />
+    <Content Include="sitecontent\images\partners\partner2.png" />
+    <Content Include="sitecontent\images\partners\partner3.png" />
+    <Content Include="sitecontent\images\partners\partner4.png" />
+    <Content Include="sitecontent\images\partners\partner5.png" />
+    <Content Include="sitecontent\images\partners\partner_bg.png" />
+    <Content Include="sitecontent\images\portfolio\full\item1.png" />
+    <Content Include="sitecontent\images\portfolio\full\item10.png" />
+    <Content Include="sitecontent\images\portfolio\full\item11.png" />
+    <Content Include="sitecontent\images\portfolio\full\item12.png" />
+    <Content Include="sitecontent\images\portfolio\full\item2.png" />
+    <Content Include="sitecontent\images\portfolio\full\item3.png" />
+    <Content Include="sitecontent\images\portfolio\full\item4.png" />
+    <Content Include="sitecontent\images\portfolio\full\item5.png" />
+    <Content Include="sitecontent\images\portfolio\full\item6.png" />
+    <Content Include="sitecontent\images\portfolio\full\item7.png" />
+    <Content Include="sitecontent\images\portfolio\full\item8.png" />
+    <Content Include="sitecontent\images\portfolio\full\item9.png" />
+    <Content Include="sitecontent\images\portfolio\recent\item1.png" />
+    <Content Include="sitecontent\images\portfolio\recent\item10.png" />
+    <Content Include="sitecontent\images\portfolio\recent\item11.png" />
+    <Content Include="sitecontent\images\portfolio\recent\item12.png" />
+    <Content Include="sitecontent\images\portfolio\recent\item2.png" />
+    <Content Include="sitecontent\images\portfolio\recent\item3.png" />
+    <Content Include="sitecontent\images\portfolio\recent\item4.png" />
+    <Content Include="sitecontent\images\portfolio\recent\item5.png" />
+    <Content Include="sitecontent\images\portfolio\recent\item6.png" />
+    <Content Include="sitecontent\images\portfolio\recent\item7.png" />
+    <Content Include="sitecontent\images\portfolio\recent\item8.png" />
+    <Content Include="sitecontent\images\portfolio\recent\item9.png" />
+    <Content Include="sitecontent\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="sitecontent\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="sitecontent\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="sitecontent\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="sitecontent\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="sitecontent\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="sitecontent\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="sitecontent\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="sitecontent\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="sitecontent\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="sitecontent\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="sitecontent\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="sitecontent\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="sitecontent\images\prettyPhoto\default\loader.gif" />
+    <Content Include="sitecontent\images\prettyPhoto\default\sprite.png" />
+    <Content Include="sitecontent\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="sitecontent\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="sitecontent\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="sitecontent\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="sitecontent\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="sitecontent\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="sitecontent\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="sitecontent\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="sitecontent\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="sitecontent\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="sitecontent\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="sitecontent\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="sitecontent\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="sitecontent\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="sitecontent\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="sitecontent\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="sitecontent\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="sitecontent\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="sitecontent\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="sitecontent\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="sitecontent\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="sitecontent\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="sitecontent\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="sitecontent\images\ribon_one.png" />
+    <Content Include="sitecontent\images\ribon_two.png" />
+    <Content Include="sitecontent\images\search_icon.png" />
+    <Content Include="sitecontent\images\services\bg_services.jpg" />
+    <Content Include="sitecontent\images\services\bg_services.png" />
+    <Content Include="sitecontent\images\services\services1.png" />
+    <Content Include="sitecontent\images\services\services2.png" />
+    <Content Include="sitecontent\images\services\services3.png" />
+    <Content Include="sitecontent\images\services\services4.png" />
+    <Content Include="sitecontent\images\services\services5.png" />
+    <Content Include="sitecontent\images\services\services6.png" />
+    <Content Include="sitecontent\images\services\slider-bg.png" />
+    <Content Include="sitecontent\images\service\client1.png" />
+    <Content Include="sitecontent\images\service\client2.png" />
+    <Content Include="sitecontent\images\service\client3.png" />
+    <Content Include="sitecontent\images\service\image_bg.png" />
+    <Content Include="sitecontent\images\service\logo.png" />
+    <Content Include="sitecontent\images\slider\bg1.jpg" />
+    <Content Include="sitecontent\images\slider\bg2.jpg" />
+    <Content Include="sitecontent\images\slider\bg3.jpg" />
+    <Content Include="sitecontent\images\slider\img1.jpg" />
+    <Content Include="sitecontent\images\slider\img3.jpg" />
+    <Content Include="sitecontent\images\slider_one.jpg" />
+    <Content Include="sitecontent\images\tab1.png" />
+    <Content Include="sitecontent\images\tab2.png" />
+    <Content Include="sitecontent\images\team-member.jpg" />
+    <Content Include="sitecontent\images\testimonials1.png" />
+    <Content Include="sitecontent\images\tut.jpg" />
+    <Content Include="sitecontent\img\banner2.jpg" />
+    <Content Include="sitecontent\img\blank.png" />
+    <Content Include="sitecontent\img\blood1.jpg" />
+    <Content Include="sitecontent\img\bloodbankleft.png" />
+    <Content Include="sitecontent\img\call.png" />
+    <Content Include="sitecontent\img\dammy.png" />
+    <Content Include="sitecontent\img\drop-nav.png" />
+    <Content Include="sitecontent\img\drop.png" />
+    <Content Include="sitecontent\img\facebook.png" />
+    <Content Include="sitecontent\img\formLogo.jpg" />
+    <Content Include="sitecontent\img\location.png" />
+    <Content Include="sitecontent\img\location1.png" />
+    <Content Include="sitecontent\img\logo.PNG" />
+    <Content Include="sitecontent\img\mail.gif" />
+    <Content Include="sitecontent\js\bootstrap.min.js" />
+    <Content Include="sitecontent\js\html5shiv.js" />
+    <Content Include="sitecontent\js\jquery.isotope.min.js" />
+    <Content Include="sitecontent\js\jquery.js" />
+    <Content Include="sitecontent\js\jquery.prettyPhoto.js" />
+    <Content Include="sitecontent\js\main.js" />
+    <Content Include="sitecontent\js\respond.min.js" />
+    <Content Include="sitecontent\js\wow.min.js" />
+    <Content Include="UI\makedonation\create.aspx" />
+    <Content Include="UI\makedonation\edit.aspx" />
+    <Content Include="UI\makedonation\list.aspx" />
+    <Content Include="UI\makepostforblood\create.aspx" />
+    <Content Include="UI\makepostforblood\edit.aspx" />
+    <Content Include="UI\makepostforblood\list.aspx" />
+    <Content Include="UI\makepostforblood\view.aspx" />
+    <Content Include="UI\Profile\friendlist.aspx" />
+    <Content Include="UI\request\requestofblood.aspx" />
+    <Content Include="UI\RetriveFacebookLoginData.aspx" />
+    <Content Include="UI\searchdonor\searchdonor.aspx" />
+    <Content Include="UI\settings\appMenu\createMenuGroup.aspx" />
+    <Content Include="UI\settings\usergroup\create.aspx" />
+    <Content Include="UI\settings\usergroup\deletedlist.aspx" />
+    <Content Include="UI\settings\usergroup\list.aspx" />
+    <Content Include="UI\settings\usergroup\update.aspx" />
+    <Content Include="UI\settings\usergroup\view.aspx" />
+    <Content Include="UI\settings\usergroup\viewlist.aspx" />
+    <Content Include="UI\settings\user\create.aspx" />
+    <Content Include="UI\settings\user\deletedList.aspx" />
+    <Content Include="UI\settings\user\list.aspx" />
+    <Content Include="UI\settings\user\update.aspx" />
+    <Content Include="UI\settings\user\view.aspx" />
+    <Content Include="UI\settings\user\viewList.aspx" />
+    <Content Include="UI\index.aspx" />
+    <Content Include="UI\Profile\changepassword.aspx" />
+    <Content Include="UI\Profile\edit.aspx" />
+    <Content Include="UI\Profile\profile.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.Master.cs">
+      <DependentUpon>App.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App.Master.designer.cs">
+      <DependentUpon>App.Master</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="errors\404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errors\404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="errors\error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errors\error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\aboutus.aspx.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\aboutus.aspx.designer.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\bevoulunteers.aspx.cs">
+      <DependentUpon>bevoulunteers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\bevoulunteers.aspx.designer.cs">
+      <DependentUpon>bevoulunteers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\contactus.aspx.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\contactus.aspx.designer.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\donorlist.aspx.cs">
+      <DependentUpon>donorlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\donorlist.aspx.designer.cs">
+      <DependentUpon>donorlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\externaluseractivation.aspx.cs">
+      <DependentUpon>externaluseractivation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\externaluseractivation.aspx.designer.cs">
+      <DependentUpon>externaluseractivation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\services.aspx.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\services.aspx.designer.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\vision.aspx.cs">
+      <DependentUpon>vision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\vision.aspx.designer.cs">
+      <DependentUpon>vision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="page\why-memeber.aspx.cs">
+      <DependentUpon>why-memeber.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="page\why-memeber.aspx.designer.cs">
+      <DependentUpon>why-memeber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UI\makedonation\create.aspx.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\makedonation\create.aspx.designer.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\makedonation\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\makedonation\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\makedonation\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\makedonation\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\makepostforblood\create.aspx.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\makepostforblood\create.aspx.designer.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\makepostforblood\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\makepostforblood\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\makepostforblood\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\makepostforblood\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\makepostforblood\view.aspx.cs">
+      <DependentUpon>view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\makepostforblood\view.aspx.designer.cs">
+      <DependentUpon>view.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Profile\friendlist.aspx.cs">
+      <DependentUpon>friendlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Profile\friendlist.aspx.designer.cs">
+      <DependentUpon>friendlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\request\requestofblood.aspx.cs">
+      <DependentUpon>requestofblood.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\request\requestofblood.aspx.designer.cs">
+      <DependentUpon>requestofblood.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RetriveFacebookLoginData.aspx.cs">
+      <DependentUpon>RetriveFacebookLoginData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\RetriveFacebookLoginData.aspx.designer.cs">
+      <DependentUpon>RetriveFacebookLoginData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\searchdonor\searchdonor.aspx.cs">
+      <DependentUpon>searchdonor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\searchdonor\searchdonor.aspx.designer.cs">
+      <DependentUpon>searchdonor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\settings\appMenu\createMenuGroup.aspx.cs">
+      <DependentUpon>createMenuGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\settings\appMenu\createMenuGroup.aspx.designer.cs">
+      <DependentUpon>createMenuGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\settings\usergroup\create.aspx.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\settings\usergroup\create.aspx.designer.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\settings\usergroup\deletedlist.aspx.cs">
+      <DependentUpon>deletedlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\settings\usergroup\deletedlist.aspx.designer.cs">
+      <DependentUpon>deletedlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\settings\usergroup\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\settings\usergroup\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\settings\usergroup\update.aspx.cs">
+      <DependentUpon>update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\settings\usergroup\update.aspx.designer.cs">
+      <DependentUpon>update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\settings\usergroup\view.aspx.cs">
+      <DependentUpon>view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\settings\usergroup\view.aspx.designer.cs">
+      <DependentUpon>view.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\settings\usergroup\viewlist.aspx.cs">
+      <DependentUpon>viewlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\settings\usergroup\viewlist.aspx.designer.cs">
+      <DependentUpon>viewlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\settings\user\create.aspx.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\settings\user\create.aspx.designer.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\settings\user\deletedList.aspx.cs">
+      <DependentUpon>deletedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\settings\user\deletedList.aspx.designer.cs">
+      <DependentUpon>deletedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\settings\user\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\settings\user\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\settings\user\update.aspx.cs">
+      <DependentUpon>update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\settings\user\update.aspx.designer.cs">
+      <DependentUpon>update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\settings\user\view.aspx.cs">
+      <DependentUpon>view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\settings\user\view.aspx.designer.cs">
+      <DependentUpon>view.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\settings\user\viewList.aspx.cs">
+      <DependentUpon>viewList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\settings\user\viewList.aspx.designer.cs">
+      <DependentUpon>viewList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Profile\changepassword.aspx.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Profile\changepassword.aspx.designer.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Profile\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Profile\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Profile\profile.aspx.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Profile\profile.aspx.designer.cs">
+      <DependentUpon>profile.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.Master" />
+    <Content Include="content\assets\font-awesome\fonts\cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2" />
+    <Content Include="content\assets\font-awesome\fonts\DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2" />
+    <Content Include="content\assets\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="content\assets\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="content\assets\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="content\assets\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="content\assets\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="content\assets\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="content\assets\font-awesome\fonts\k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2" />
+    <Content Include="content\assets\font-awesome\fonts\PRmiXeptR36kaC0GEAetxko2lTMeWA_kmIyWrkNCwPc.woff2" />
+    <Content Include="Site.Master" />
+    <Content Include="sitecontent\fonts\fontawesome-webfont.eot" />
+    <Content Include="sitecontent\fonts\fontawesome-webfont.svg" />
+    <Content Include="sitecontent\fonts\fontawesome-webfont.ttf" />
+    <Content Include="sitecontent\fonts\fontawesome-webfont.woff" />
+    <Content Include="sitecontent\fonts\FontAwesome.otf" />
+    <Content Include="sitecontent\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="sitecontent\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="sitecontent\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="sitecontent\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="sitecontent\images\404.xcf" />
+    <None Include="Properties\PublishProfiles\VSFP.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppSupport.Project\AppSupport.Project.csproj">
+      <Project>{ccfa9872-29e0-43f1-87d9-0443f505baf8}</Project>
+      <Name>AppSupport.Project</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50251/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

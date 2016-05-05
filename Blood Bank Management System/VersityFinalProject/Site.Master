@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="VersityFinalProject.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Home | Blood Bank Management System</title>
+
+    <!-- core CSS -->
+    <link href="/sitecontent/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/sitecontent/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/sitecontent/css/animate.min.css" rel="stylesheet" />
+    <link href="/sitecontent/css/prettyPhoto.css" rel="stylesheet" />
+    <link href="/sitecontent/css/main.css" rel="stylesheet" />
+    <link href="/sitecontent/css/style.css" rel="stylesheet" />
+    <link href="/sitecontent/css/responsive.css" rel="stylesheet" />
+    <link href="/content/assets/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="images/ico/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/sitecontent/images/ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/sitecontent/images/ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/sitecontent/images/ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="/sitecontent/images/ico/apple-touch-icon-57-precomposed.png" />
+    <asp:ContentPlaceHolder ID="headerContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="homepage">
+    <form id="form1" runat="server">
+        <header id="header">
+            <div class="top-bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-4">
+                            <div class="top-number">
+                                <p><i class="fa fa-phone-square"></i>+08801685-854626</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-8">
+                            <div class="social">
+                                <ul class="social-share">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-skype"></i></a></li>
+                                </ul>
+                                <div class="search">
+
+                                    <input type="text" placeholder="Search" autocomplete="off" class="search-form">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--/.container-->
+            </div>
+            <!--/.top-bar-->
+
+            <nav role="banner" class="navbar navbar-inverse">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="index.html" class="navbar-brand">
+                            <img alt="logo" src="/sitecontent/images/logo.png" /></a>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/default.aspx">Home</a></li>
+                            <li><a href="/page/aboutus.aspx">About Us</a></li>
+                            <li><a href="/page/services.aspx">Services</a></li>
+                            <li><a href="/page/vision.aspx">Vision</a></li>
+                            <li><a href="/page/donorlist.aspx">Donner-list</a></li>
+                            <li class="dropdown">
+                                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Membership <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/page/why-memeber.aspx">Why Member ?</a></li>
+                                    <li><a href="/page/bevoulunteers.aspx">Be Member</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="/page/contactus.aspx">Contact</a></li>
+                            <li><a href="/login.aspx">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.container-->
+            </nav>
+            <!--/nav-->
+        </header>
+        <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <footer class="midnight-blue" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        &copy; 2015 <a title="Free Twitter Bootstrap WordPress Themes and HTML templates" href="http://shapebootstrap.net/" target="_blank">Donate blood</a>... Friends foundation.
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="pull-right">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Faq</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="/sitecontent/js/jquery.js"></script>
+        <script src="/sitecontent/js/bootstrap.min.js"></script>
+        <script src="/content/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="/sitecontent/js/jquery.prettyPhoto.js"></script>
+        <script src="/sitecontent/js/jquery.isotope.min.js"></script>
+        <script src="/sitecontent/js/main.js"></script>
+        <script src="/sitecontent/js/wow.min.js"></script>
+        <asp:ContentPlaceHolder ID="ScriptContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

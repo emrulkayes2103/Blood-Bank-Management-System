@@ -1,0 +1,202 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="App.master.cs" Inherits="VersityFinalProject.App" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <%-- <link rel="shortcut icon" href="http://thevectorlab.net/flatlab/img/favicon.png">--%>
+
+    <title>VSFP</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/content/css/bootstrap-reset.css" rel="stylesheet" />
+    <link href="/content/assets/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
+    <!--external css-->
+    <link href="/content/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/content/assets/advanced-datatable/media/css/demo_page.css" rel="stylesheet" />
+    <link href="/content/assets/advanced-datatable/media/css/demo_table.css" rel="stylesheet" />
+    <link href="/content/assets/data-tables/DT_bootstrap.css" rel="stylesheet" />
+    <!--right slidebar-->
+    <link href="/content/css/slidebars.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="/content/css/style.css" rel="stylesheet" />
+    <link href="/content/css/style-responsive.css" rel="stylesheet" />
+    <link href="/content/css/appstyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="headerContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="scripManager1" runat="server"></asp:ScriptManager>
+
+        <section class="" id="container">
+            <!--header start-->
+            <header class="header white-bg">
+                <div class="sidebar-toggle-box">
+                    <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+                </div>
+                <!--logo start-->
+                <a class="logo" href="/UI/index.aspx">VS<span>FP</span></a>
+                <!--logo end-->
+                <div id="top_menu" class="nav notify-row">
+                </div>
+                <div class="top-nav ">
+                    <ul class="nav pull-right top-menu">
+                        <li>
+                            <input type="text" placeholder="Search" class="form-control search" />
+                        </li>
+                        <!-- user login dropdown start-->
+                        <li class="dropdown">
+                            <a href="blank.html#" class="dropdown-toggle" data-toggle="dropdown">
+                                <asp:Image runat="server" ID="proFileImage" Height="29" Width="29" />
+                                <span class="username">
+                                    <asp:Label runat="server" ID="userName"></asp:Label>
+                                </span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu extended logout">
+                                <div class="log-arrow-up"></div>
+                                <li><a href="/UI/Profile/profile.aspx"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                                <li><a href="/default.aspx" target="_blank"><i class="fa fa-cog"></i>Web Home</a></li>
+                                <li><a href="blank.html#"><i class="fa fa-bell-o"></i>Notification</a></li>
+                                <li><a href="/logout.aspx"><i class="fa fa-key"></i>Log Out</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- user login dropdown end -->
+                        <li class="sb-toggle-right">
+                            <i class="fa  fa-align-right"></i>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <!--header end-->
+            <!--sidebar start-->
+            <%--<aside>
+                <div class="nav-collapse " id="sidebar" style="overflow: hidden; margin-left: 0px;" tabindex="5000">
+                    <!-- sidebar menu start-->
+                    <ul id="nav-accordion" class="sidebar-menu" style="display: block;">
+                        <li>
+                            <a href="/UI/index.aspx">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+
+                        <li class="sub-menu dcjq-parent-li" id="user" runat="server" visible="false">
+                            <a href="javascript:;" class="dcjq-parent">
+                                <i class="fa fa-user"></i>
+                                <span>Users</span>
+                                <span class="dcjq-icon"></span></a>
+                            <ul class="sub" style="display: none;">
+                                <li><a href="/UI/settings/user/create.aspx"><i class="fa fa-plus"></i> Create</a></li>
+                                <li><a href="/UI/settings/user/list.aspx"><i class="fa fa-th-list"></i> List</a></li>
+                                <li><a href="/UI/settings/user/viewList.aspx"><i class="fa fa-eye-slash"></i> View</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu dcjq-parent-li" id="userGroup" runat="server" visible="false">
+                            <a href="javascript:;" class="dcjq-parent">
+                                <i class="fa fa-users"></i>
+                                <span>User Group</span>
+                                <span class="dcjq-icon"></span></a>
+                            <ul class="sub" style="display: none;">
+                                <li><a href="/UI/settings/usergroup/create.aspx"><i class="fa fa-plus"></i> Create</a></li>
+                                <li><a href="/UI/settings/usergroup/list.aspx"><i class="fa fa-th-list"></i> List</a></li>
+                                <li><a href="/UI/settings/usergroup/viewlist.aspx"><i class="fa fa-eye-slash"></i> View</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu dcjq-parent-li">
+                            <a href="javascript:;" class="dcjq-parent">
+                                <i class="fa fa-exchange"></i>
+                                <span>Post For Blood</span>
+                                <span class="dcjq-icon"></span></a>
+                            <ul class="sub" style="display: none;">
+                                <li><a href="/UI/makepostforblood/create.aspx"><i class="fa fa-plus"></i>Create</a></li>
+                                <li><a href="/UI/makepostforblood/list.aspx"><i class="fa fa-th-list"></i> List</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu dcjq-parent-li">
+                            <a href="javascript:;" class="dcjq-parent">
+                                <i class="fa fa-gift"></i>
+                                <span>Make Donation</span>
+                                <span class="dcjq-icon"></span></a>
+                            <ul class="sub" style="display: none;">
+                                <li><a href="/UI/makedonation/create.aspx"><i class="fa fa-plus"></i>Create</a></li>
+                                <li><a href="/UI/makedonation/list.aspx"><i class="fa fa-th-list"></i>List</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu dcjq-parent-li">
+                            <a href="/UI/request/requestofblood.aspx" class="dcjq-parent">
+                                <i class="fa fa-comments-o"></i>
+                                <span>Requests of Blood</span>
+                                </a>
+                        </li>
+                        <li class="sub-menu dcjq-parent-li">
+                            <a href="/UI/searchdonor/searchdonor.aspx" class="dcjq-parent">
+                                <i class="fa fa-search"></i>
+                                <span>Search Donor</span>
+                                </a>
+                        </li>
+                    </ul>
+                    <!-- sidebar menu end-->
+                </div>
+            </aside>--%>
+            <!--sidebar end-->
+            <!--sidebar end-->
+            <%--<section id="main-content" style="margin-left: 210px;">--%>
+            <section class="wrapper site-min-height">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="/UI/index.aspx" style="font-size: 20px;"><i class="fa fa-home"></i>Home</a>
+                    </div>
+                </div>
+                <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+
+                    <!-- page start-->
+
+                    <!-- page end-->
+                </asp:ContentPlaceHolder>
+            </section>
+            <%--</section>--%>
+            <!--main content end-->
+
+            <!-- Right Slidebar start -->
+
+            <!-- Right Slidebar end -->
+
+            <!--footer start-->
+            <footer class="site-footer">
+                <div class="text-center">
+                    2013 &copy;
+                </div>
+            </footer>
+            <!--footer end-->
+        </section>
+        <!--main content start-->
+
+        <!-- js placed at the end of the document so the pages load faster -->
+        <script src="/content/js/jquery.js"></script>
+        <script src="/content/js/bootstrap.min.js"></script>
+        <script src="/content/assets/data-tables/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="/content/js/jquery.dcjqaccordion.2.7.js"></script>
+        <script src="/content/js/jquery.scrollTo.min.js"></script>
+        <script src="/content/js/slidebars.min.js"></script>
+        <script src="/content/js/jquery.nicescroll.js" type="text/javascript"></script>
+        <script src="/content/js/respond.min.js"></script>
+        <script src="/content/assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="/content/assets/data-tables/DT_bootstrap.js"></script>
+        <script src="/content/assets/advanced-datatable/media/js/jquery.dataTables.js"></script>
+        <!--common script for all pages-->
+        <script src="/content/js/common-scripts.js"></script>
+        <asp:ContentPlaceHolder ID="ScriptContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
